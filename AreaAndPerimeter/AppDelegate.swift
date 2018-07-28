@@ -15,7 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let shape = Cirle(radius: 5)
+        let areaAndPerimeterViewController = window!.rootViewController as! AreaAndPerimeterViewController
+        areaAndPerimeterViewController.shape = shape
+        
         return true
     }
 
