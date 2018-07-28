@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="HAG-Ur-uwr">
-                                <rect key="frame" x="8" y="444" width="359" height="91.666666666666629"/>
+                                <rect key="frame" x="8" y="464.33333333333331" width="359" height="71.333333333333314"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DIMENSIONS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76N-UL-N0E">
                                         <rect key="frame" x="0.0" y="0.0" width="234" height="43"/>
@@ -28,7 +28,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="FGA-q1-wQT">
-                                        <rect key="frame" x="0.0" y="47" width="359" height="44.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="47" width="359" height="24.333333333333329"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOG-Zs-3cD">
                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="20.333333333333332"/>
@@ -48,16 +48,16 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HDf-HG-Y8o">
-                                                <rect key="frame" x="0.0" y="24.333333333333371" width="359" height="20.333333333333329"/>
+                                                <rect key="frame" x="0.0" y="24.333333333333314" width="359" height="0.0"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="r = " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vc4-mK-kLz">
-                                                        <rect key="frame" x="0.0" y="0.0" width="27" height="20.333333333333332"/>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="r = " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vc4-mK-kLz">
+                                                        <rect key="frame" x="-8" y="-535.66666666666663" width="0.0" height="20.333333333333371"/>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oJ3-an-oXQ">
-                                                        <rect key="frame" x="27" y="0.0" width="332" height="20.333333333333332"/>
+                                                    <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oJ3-an-oXQ">
+                                                        <rect key="frame" x="-8" y="-535.66666666666663" width="0.0" height="20.333333333333371"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
@@ -141,11 +141,11 @@
                                 <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ej-qN-BG8">
-                                <rect key="frame" x="8" y="151" width="359" height="233"/>
+                                <rect key="frame" x="8" y="151" width="359" height="253.33333333333337"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="F0j-nZ-NNt">
-                                <rect key="frame" x="74" y="400" width="227" height="29"/>
+                                <rect key="frame" x="74" y="420.33333333333331" width="227" height="29"/>
                                 <segments>
                                     <segment title="Circle"/>
                                     <segment title="Square"/>
