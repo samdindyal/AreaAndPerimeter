@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AreaAndPerimeterViewController: UIViewController {
+class AreaAndPerimeterViewController: UIViewController, UITextFieldDelegate {
     
     // Labels
     @IBOutlet var shapeLabel: UILabel!
@@ -43,6 +43,10 @@ class AreaAndPerimeterViewController: UIViewController {
             if let circle = shapes[currentShape] as? Circle,
                 let radius = Float(value1Field.text!) {
                 circle.radius = radius
+            } else {
+                perimeterLabel.text = "???"
+                areaLabel.text = "???"
+                return
             }
         case "Rectangle":
             if let rectangle = shapes[currentShape] as? Rectangle,
@@ -50,11 +54,19 @@ class AreaAndPerimeterViewController: UIViewController {
                 let width = Float(value2Field.text!){
                 rectangle.height = height
                 rectangle.width  = width
+            } else {
+                perimeterLabel.text = "???"
+                areaLabel.text = "???"
+                return
             }
         case "Square":
             if let square = shapes[currentShape] as? Square,
                 let length = Float(value1Field.text!) {
                 square.length = length
+            } else {
+                perimeterLabel.text = "???"
+                areaLabel.text = "???"
+                return
             }
         default:
             preconditionFailure("Invalid shape!")
@@ -113,5 +125,15 @@ class AreaAndPerimeterViewController: UIViewController {
             }
             
         }
+    }
+    
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+        
+        let existingTextHasSeparator = textField.text?.range(of: ".")
+        let replacementTextHasSeparator = string.range(of: ".")
+        
+        return existingTextHasSeparator == nil || replacementTextHasSeparator == nil
     }
 }

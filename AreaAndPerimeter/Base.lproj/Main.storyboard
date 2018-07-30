@@ -33,7 +33,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="rOG-Zs-3cD">
                                                 <rect key="frame" x="0.0" y="0.0" width="359" height="22"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="r = " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoF-0Z-oKu">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="r = " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zoF-0Z-oKu">
                                                         <rect key="frame" x="0.0" y="0.0" width="27" height="22"/>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -43,9 +43,10 @@
                                                         <rect key="frame" x="39" y="0.0" width="320" height="22"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                         <connections>
                                                             <action selector="userInput:" destination="BYZ-38-t0r" eventType="editingChanged" id="wWm-Am-aXa"/>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="QqW-HP-Abf"/>
                                                         </connections>
                                                     </textField>
                                                 </subviews>
@@ -53,7 +54,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="HDf-HG-Y8o">
                                                 <rect key="frame" x="0.0" y="25.999999999999943" width="359" height="22"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="r = " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vc4-mK-kLz">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="r = " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vc4-mK-kLz">
                                                         <rect key="frame" x="0.0" y="0.0" width="27" height="22"/>
                                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -63,14 +64,19 @@
                                                         <rect key="frame" x="39" y="0.0" width="320" height="22"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                         <connections>
                                                             <action selector="userInput:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Brp-Q8-3Cs"/>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="6xE-c8-Pzt"/>
                                                         </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="zoF-0Z-oKu" firstAttribute="trailing" secondItem="Vc4-mK-kLz" secondAttribute="trailing" id="TpL-CG-1tr"/>
+                                            <constraint firstItem="jnM-hy-obk" firstAttribute="leading" secondItem="oJ3-an-oXQ" secondAttribute="leading" id="vX2-kd-73E"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <constraints>
