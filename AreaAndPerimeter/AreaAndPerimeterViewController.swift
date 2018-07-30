@@ -37,6 +37,32 @@ class AreaAndPerimeterViewController: UIViewController {
         }
     }
     
+    @IBAction func userInput(_ sender: UITextField) {
+        switch currentShape {
+        case "Circle":
+            if let circle = shapes[currentShape] as? Circle,
+                let radius = Float(value1Field.text!) {
+                circle.radius = radius
+            }
+        case "Rectangle":
+            if let rectangle = shapes[currentShape] as? Rectangle,
+                let height = Float(value1Field.text!),
+                let width = Float(value2Field.text!){
+                rectangle.height = height
+                rectangle.width  = width
+            }
+        case "Square":
+            if let square = shapes[currentShape] as? Square,
+                let length = Float(value1Field.text!) {
+                square.length = length
+            }
+        default:
+            preconditionFailure("Invalid shape!")
+        }
+        
+        self.recalculate()
+    }
+    
     var shapes: [String:Shape]!
     var currentShape: String!
     
@@ -48,6 +74,16 @@ class AreaAndPerimeterViewController: UIViewController {
         drawView.setNeedsDisplay()
     }
     
+    func recalculate() {
+        if let shape = self.shapes[self.currentShape] {
+            perimeterLabel.text = "\(shape.getPerimeter()) cm"
+            perimeterFormulaLabel.text = shape.formulae["perimeter"]
+            
+            areaLabel.text = "\(shape.getArea()) cm"
+            areaFormulaLabel.text = shape.formulae["area"]
+        }
+    }
+    
     func setFields() {
         if let shape = self.shapes[self.currentShape] {
             drawView.shape = shape
@@ -55,26 +91,22 @@ class AreaAndPerimeterViewController: UIViewController {
             
             shapeLabel.text = currentShape.uppercased()
             
-            perimeterLabel.text = "\(shape.getPerimeter()) cm"
-            perimeterFormulaLabel.text = shape.formulae["perimeter"]
-            
-            areaLabel.text = "\(shape.getArea()) cm"
-            areaFormulaLabel.text = shape.formulae["area"]
+            self.recalculate()
             
             switch currentShape {
             case "Circle":
                 value2Stack.isHidden = true
-                value1Field.text = "\((shape as! Circle).radius) cm"
+                value1Field.text = "\((shape as! Circle).radius)"
                 value1Label.text = "r ="
             case "Square":
                 value2Stack.isHidden = true
-                value1Field.text = "\((shape as! Square).length) cm"
+                value1Field.text = "\((shape as! Square).length)"
                 value1Label.text = "x ="
             case "Rectangle":
                 value2Stack.isHidden = false
-                value1Field.text = "\((shape as! Rectangle).width) cm"
+                value1Field.text = "\((shape as! Rectangle).width)"
                 value1Label.text = "w ="
-                value2Field.text = "\((shape as! Rectangle).height) cm"
+                value2Field.text = "\((shape as! Rectangle).height)"
                 value2Label.text = "h ="
             default:
                 preconditionFailure("The shape \"\(currentShape)\" does not exist.")

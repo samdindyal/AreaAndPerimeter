@@ -44,6 +44,9 @@
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="userInput:" destination="BYZ-38-t0r" eventType="editingChanged" id="wWm-Am-aXa"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -61,6 +64,9 @@
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                         <textInputTraits key="textInputTraits"/>
+                                                        <connections>
+                                                            <action selector="userInput:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="Brp-Q8-3Cs"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -72,7 +78,7 @@
                                     <constraint firstAttribute="trailing" secondItem="FGA-q1-wQT" secondAttribute="trailing" id="YL3-Id-aMa"/>
                                 </constraints>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHAPE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPI-FU-9OQ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHAPE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RPI-FU-9OQ">
                                 <rect key="frame" x="77.333333333333329" y="60.000000000000007" width="220.66666666666669" height="76.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="64"/>
                                 <nil key="textColor"/>
@@ -160,7 +166,6 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9xp-Rq-WVv" firstAttribute="centerX" secondItem="RPI-FU-9OQ" secondAttribute="centerX" id="0sS-HI-JX8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RPI-FU-9OQ" secondAttribute="trailing" constant="8" id="1cn-wh-E3f"/>
                             <constraint firstItem="7Ej-qN-BG8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="3Yo-6p-lxg"/>
                             <constraint firstItem="RPI-FU-9OQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4Jl-c3-gbR"/>
                             <constraint firstItem="HAG-Ur-uwr" firstAttribute="top" secondItem="F0j-nZ-NNt" secondAttribute="bottom" constant="16.000000000000057" id="575-SQ-GrD"/>
@@ -172,12 +177,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="F0j-nZ-NNt" secondAttribute="trailing" constant="8" id="Q23-8z-FZZ"/>
                             <constraint firstItem="7Ej-qN-BG8" firstAttribute="top" secondItem="RPI-FU-9OQ" secondAttribute="bottom" constant="14.333333333333314" id="REM-Bd-JIP"/>
                             <constraint firstItem="9xp-Rq-WVv" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="17.999999999999886" id="Rea-rI-hdb"/>
-                            <constraint firstItem="RPI-FU-9OQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="Sl5-cU-nhB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RPI-FU-9OQ" secondAttribute="trailing" constant="8" id="Zuh-V5-Rqe"/>
                             <constraint firstItem="9xp-Rq-WVv" firstAttribute="top" secondItem="HAG-Ur-uwr" secondAttribute="bottom" constant="52.999999999999773" id="aXO-Ru-vu8"/>
                             <constraint firstItem="7Ej-qN-BG8" firstAttribute="centerX" secondItem="RPI-FU-9OQ" secondAttribute="centerX" id="abv-fc-nuj"/>
                             <constraint firstItem="F0j-nZ-NNt" firstAttribute="top" secondItem="7Ej-qN-BG8" secondAttribute="bottom" constant="16.000000000000057" id="fMs-KP-Ixb"/>
                             <constraint firstItem="RPI-FU-9OQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="gVA-he-Bvf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HAG-Ur-uwr" secondAttribute="trailing" constant="8" id="ltI-Jl-nCp"/>
+                            <constraint firstItem="RPI-FU-9OQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="mff-qK-Ma2"/>
                             <constraint firstItem="F0j-nZ-NNt" firstAttribute="centerX" secondItem="RPI-FU-9OQ" secondAttribute="centerX" id="p0q-1i-CtR"/>
                             <constraint firstItem="HAG-Ur-uwr" firstAttribute="centerX" secondItem="RPI-FU-9OQ" secondAttribute="centerX" id="uK7-YW-chD"/>
                         </constraints>

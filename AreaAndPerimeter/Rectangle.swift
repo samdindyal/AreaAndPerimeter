@@ -72,6 +72,7 @@ class Rectangle: Shape {
         shapePaths.append(shapePath)
         
         self.shapePaths = shapePaths
+        self.bounds = bounds
     }
     
     func calculateShapePaths() {

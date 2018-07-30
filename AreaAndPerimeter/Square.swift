@@ -56,6 +56,7 @@ class Square: Shape {
         shapePaths.append(shapePath)
         
         self.shapePaths = shapePaths
+        self.bounds = bounds
     }
     
     func calculateShapePaths() {
