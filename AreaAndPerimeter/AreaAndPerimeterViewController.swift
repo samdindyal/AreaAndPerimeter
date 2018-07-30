@@ -20,7 +20,7 @@ class AreaAndPerimeterViewController: UIViewController {
     @IBOutlet var perimeterLabel: UILabel!
     
     // View for drawing shape
-    @IBOutlet var drawView: UIView!
+    @IBOutlet var drawView: DrawView!
     
     // Textfields
     @IBOutlet var value1Field: UITextField!
@@ -31,11 +31,55 @@ class AreaAndPerimeterViewController: UIViewController {
     @IBOutlet var value2Stack: UIStackView!
     
     @IBAction func changeShape(_ sender: UISegmentedControl) {
+        if let currentShape = sender.titleForSegment(at: sender.selectedSegmentIndex) {
+            self.currentShape = currentShape
+            setFields()
+        }
     }
     
-    var shape:Shape
+    var shapes: [String:Shape]!
+    var currentShape: String!
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        drawView.shape = self.shapes[currentShape]
+        setFields()
+        drawView.setNeedsDisplay()
+    }
+    
+    func setFields() {
+        if let shape = self.shapes[self.currentShape] {
+            drawView.shape = shape
+            drawView.setNeedsDisplay()
+            
+            shapeLabel.text = currentShape.uppercased()
+            
+            perimeterLabel.text = "\(shape.getPerimeter()) cm"
+            perimeterFormulaLabel.text = shape.formulae["perimeter"]
+            
+            areaLabel.text = "\(shape.getArea()) cm"
+            areaFormulaLabel.text = shape.formulae["area"]
+            
+            switch currentShape {
+            case "Circle":
+                value2Stack.isHidden = true
+                value1Field.text = "\((shape as! Circle).radius) cm"
+                value1Label.text = "r ="
+            case "Square":
+                value2Stack.isHidden = true
+                value1Field.text = "\((shape as! Square).length) cm"
+                value1Label.text = "x ="
+            case "Rectangle":
+                value2Stack.isHidden = false
+                value1Field.text = "\((shape as! Rectangle).width) cm"
+                value1Label.text = "w ="
+                value2Field.text = "\((shape as! Rectangle).height) cm"
+                value2Label.text = "h ="
+            default:
+                preconditionFailure("The shape \"\(currentShape)\" does not exist.")
+            }
+            
+        }
     }
 }

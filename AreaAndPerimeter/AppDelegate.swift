@@ -13,11 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        let shape = Cirle(radius: 5)
         let areaAndPerimeterViewController = window!.rootViewController as! AreaAndPerimeterViewController
-        areaAndPerimeterViewController.shape = shape
+        areaAndPerimeterViewController.shapes = [
+            "Circle": Circle(radius: 5),
+            "Square": Square(length: 5),
+            "Rectangle": Rectangle(width: 5, height: 2)
+        ]
+        areaAndPerimeterViewController.currentShape = "Circle"
         
         return true
     }

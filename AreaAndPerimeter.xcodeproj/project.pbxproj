@@ -16,6 +16,7 @@
 		58559447210B508F00B12D60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58559445210B508F00B12D60 /* Main.storyboard */; };
 		58559449210B508F00B12D60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58559448210B508F00B12D60 /* Assets.xcassets */; };
 		5855944C210B508F00B12D60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5855944A210B508F00B12D60 /* LaunchScreen.storyboard */; };
+		58DD4CCB210E3E6E00405B09 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD4CCA210E3E6E00405B09 /* DrawView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		58559448210B508F00B12D60 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5855944B210B508F00B12D60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5855944D210B508F00B12D60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58DD4CCA210E3E6E00405B09 /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				58559441210B508F00B12D60 /* AppDelegate.swift */,
 				58559445210B508F00B12D60 /* Main.storyboard */,
 				5849A251210D19C60035CF25 /* AreaAndPerimeterViewController.swift */,
+				58DD4CCA210E3E6E00405B09 /* DrawView.swift */,
 				5849A253210D19F50035CF25 /* Shape.swift */,
 				58559448210B508F00B12D60 /* Assets.xcassets */,
 				5855944A210B508F00B12D60 /* LaunchScreen.storyboard */,
@@ -149,6 +152,7 @@
 			files = (
 				5849A25A210D1DE10035CF25 /* Square.swift in Sources */,
 				5849A258210D1DDB0035CF25 /* Rectangle.swift in Sources */,
+				58DD4CCB210E3E6E00405B09 /* DrawView.swift in Sources */,
 				5849A252210D19C60035CF25 /* AreaAndPerimeterViewController.swift in Sources */,
 				5849A256210D1BB30035CF25 /* Circle.swift in Sources */,
 				58559442210B508F00B12D60 /* AppDelegate.swift in Sources */,
